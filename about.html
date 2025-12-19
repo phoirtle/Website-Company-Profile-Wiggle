@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Wiggle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heart"></i> Wiggle
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <button class="dark-mode-toggle" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- pg header -->
+    <div class="page-header">=
+        <div class="container">
+            <h1>Tentang Wiggle 💖</h1>
+            <p>Lebih dari sekedar fashion - kami adalah gerakan Gen Z untuk ekspresif dan berani tampil beda!</p>
+        </div>
+    </div>
+
+    <!-- bagian cerita -->
+    <section class="section story-section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title">Cerita Kami 📖</h2>
+                    <p class="story-content">
+                        Wiggle lahir dari passion kami untuk fashion yang <strong>cute, lucu, dan penuh warna!</strong> Dimulai dari tahun 2024, kami ingin menciptakan brand yang bisa jadi representasi Gen Z yang berani ekspresif dan nggak takut tampil beda.
+                    </p>
+                    <p class="story-content">
+                        Awalnya, kami cuma jualan lewat Instagram dengan modal nekat dan semangat yang membara. Tapi berkat support dari kalian semua, Wiggle sekarang udah punya online store sendiri dan koleksi yang makin beragam!
+                    </p>
+                    <p class="story-content">
+                        Setiap produk kami didesign dengan <strong>love dan perhatian detail</strong>, karena kami percaya fashion bukan cuma soal penampilan, tapi juga cara mengekspresikan diri!
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="image/shopping.jpg" alt="Our Story" class="story-img">
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div id="aboutCarousel" class="carousel slide carousel-about mb-5" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/aespa.jpg" alt="Behind the Scenes">
+                        <div class="carousel-caption">
+                            <h5>Behind The Scenes</h5>
+                            <p>Intip proses kreatif kami dalam menciptakan design-design yang unik!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&h=500&fit=crop" alt="Our Workshop">
+                        <div class="carousel-caption">
+                            <h5>Workshop Kami</h5>
+                            <p>Tempat di mana semua magic terjadi - dari sketsa sampai produk jadi!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1200&h=500&fit=crop" alt="Our Community">
+                        <div class="carousel-caption">
+                            <h5>Wiggle Community</h5>
+                            <p>Keluarga besar Wiggle yang udah jadi bagian dari journey kami!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi n misi -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Visi & Misi Kami 🎯</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="vision-mission-card">
+                        <h3><i class="fas fa-eye me-2"></i> Visi</h3>
+                        <p>
+                            Menjadi <strong>brand fashion Gen Z #1 di Indonesia</strong> yang identik dengan keunikan, keceriaan, dan kualitas. Kami ingin Wiggle jadi pilihan utama buat Gen Z yang mau ekspresif dan percaya diri dengan style mereka!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vision-mission-card">
+                        <h3><i class="fas fa-bullseye me-2"></i> Misi</h3>
+                        <ul>
+                            <li>Menciptakan produk fashion berkualitas dengan design yang lucu dan stylish</li>
+                            <li>Memberikan pengalaman belanja yang menyenangkan dan memorable</li>
+                            <li>Mendukung ekspresi diri melalui fashion yang berani dan berbeda</li>
+                            <li>Membangun komunitas Gen Z yang positif dan saling support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bagian tim -->
+    <section class="section values-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Tim Kreatif Kami 👥</h2>
+            <p class="text-center mb-5" style="font-size: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Kenalan sama tim awesome yang bikin Wiggle jadi kenyataan!
+            </p>
+            
+           <div class="row g-4">
+    <div class="col-md-4">
+        <div class="team-card">
+            <img src="image/key.jpeg" alt="Founder">
+            <div class="card-body text-center">
+                <h5 class="card-title">Axkeisha Azura alwaqar</h5>
+                <p class="team-role">Founder & Creative Director</p>
+                <p>Passionate banget tentang fashion dan seni. Suka warna pink dan segala yang cute!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="team-card">
+            <img src="image/dea.jpeg" alt="Designer">
+            <div class="card-body text-center">
+                <h5 class="card-title">Dea Amalia Rombon</h5>
+                <p class="team-role">Head Designer</p>
+                <p>Ahli dalam menciptakan design yang out of the box dan eye-catching!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="team-card">
+            <img src="image/karin.jpeg" alt="Art Director">
+            <div class="card-body text-center">
+                <h5 class="card-title">Careena Putri</h5>
+                <p class="team-role">Art Director</p>
+                <p>Ahli visual yang menciptakan dunia estetika kami, dari kampanye hingga desain toko.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- baris kedua -->
+<div class="row g-4 justify-content-center mt-4">
+    <div class="col-md-4">
+        <div class="team-card">
+            <img src="image/algi.jpeg" alt="Buying Director">
+            <div class="card-body text-center">
+                <h5 class="card-title">M. Ghaza ALgifahri</h5>
+                <p class="team-role">Buying Director</p>
+                <p>Strategis yang menjembatani kreativitas dengan bisnis, memastikan produk tepat untuk Anda.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="team-card">
+            <img src="image/zaif.jpeg" alt="campaign Director">
+            <div class="card-body text-center">
+                <h5 class="card-title">Zaif Daffarian</h5>
+                <p class="team-role">Campaign Director</p>
+                <p>Storyteller yang membawa cerita koleksi kami ke hadapan Anda.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- bagian nilai -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nilai-Nilai Kami 💎</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fas fa-heart"></i></div>
+                        <h4>Passion</h4>
+                        <p>Kami menjalankan bisnis ini dengan cinta dan dedikasi penuh</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Innovation</h4>
+                        <p>Selalu berinovasi dan menciptakan sesuatu yang baru</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Quality</h4>
+                        <p>Kualitas produk adalah prioritas utama kami</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fas fa-users"></i></div>
+                        <h4>Community</h4>
+                        <p>Membangun komunitas yang supportive dan positif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h4>Wiggle - Fashion for Gen Z 💖</h4>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Stay cute, stay stylish!</p>
+            <div class="social-icons mb-4">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2025 Wiggle. All Rights Reserved. Made with Love</p>
+        </div>
+    </footer>
+
+    <!-- Scroll dr atas -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+  </html>
