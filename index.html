@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiggle - Fashion Gen Z yang Lucu & Stylish</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heart"></i> Wiggle
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <button class="dark-mode-toggle" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </buttoSn>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('image/miu.jpg');">
+                <div class="carousel-caption">
+                    <h1>Welcome to Wiggle! ✨</h1>
+                    <p>Fashion Lucu & Stylish untuk Gen Z yang Berani Tampil Beda</p>
+                    <a href="products.html" class="cta-button">Shop Now!</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&h=1080&fit=crop');">
+                <div class="carousel-caption">
+                    <h1>New Collection 2025! 🎀</h1>
+                    <p>Koleksi Terbaru yang Bikin Kamu Makin Kece & Percaya Diri</p>
+                    <a href="products.html" class="cta-button">Explore Now!</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1920&h=1080&fit=crop');">
+                <div class="carousel-caption">
+                    <h1>Special Discount! 💖</h1>
+                    <p>Diskon hingga 50% untuk Member Baru - Jangan Sampai Ketinggalan!</p>
+                    <a href="contact.html" class="cta-button">Join Now!</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Bagian Welcome -->
+    <section class="welcome-section">
+        <div class="container">
+            <h2 class="section-title">Kenapa Pilih wiggle? 💕</h2>
+            <p class="section-subtitle">Kami bukan cuma jual baju, tapi juga jual kepercayaan diri dan keunikan yang bikin kamu stand out di mana aja!</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Design Eksklusif</h3>
+                        <p>Setiap design dibuat dengan cinta dan nggak akan kamu temuin di brand lain. Limited edition banget!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Kualitas Premium</h3>
+                        <p>Bahan berkualitas tinggi yang nyaman dipakai seharian. Dijamin awet dan nggak gampang luntur!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3>Harga Terjangkau</h3>
+                        <p>Fashion kece nggak harus mahal! Kami kasih harga yang ramah di kantong pelajar dan mahasiswa.</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Preview Section -->
+    <section class="product-preview">
+        <div class="container">
+            <h2 class="section-title">Produk Terlaris</h2>
+            <p class="section-subtitle">Ini dia produk-produk favorit yang paling banyak diburu sama Gen Z!</p>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="image/oversize.jpeg" alt="Cute Oversized Tee">
+                        <div class="card-body">
+                            <h5 class="card-title">Cute Oversized Tee</h5>
+                            <p class="product-price">Rp 149.000</p>
+                            <p>Kaos oversize dengan print lucu yang cocok untuk hangout bareng bestie!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="image/hoodie.jpeg" alt="Hoodie">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoodie</h5>
+                            <p class="product-price">Rp 249.000</p>
+                            <p>Hoodie yang soft dan cozy banget, perfect untuk cuaca dingin!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="image/miniskirt.jpeg" alt="Pleated Skirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Pleated Mini Skirt</h5>
+                            <p class="product-price">Rp 179.000</p>
+                            <p>Rok pleated yang super cute dan flowy, bikin penampilan makin girly!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="products.html" class="cta-button">Lihat Semua Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h4>Wiggle - Fashion for Gen Z 💖</h4>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Stay cute, stay stylish!</p>
+            <div class="social-icons mb-4">
+                <a href="#1"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2025 Wiggle. All Rights Reserved. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scroll ke atas-->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
