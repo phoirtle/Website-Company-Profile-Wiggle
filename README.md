@@ -1,7 +1,5 @@
 # Website-Company-Profile-Wiggle
 
-# 💗 Wiggle - Fashion for Gen Z (UAS Pemrograman Web)
-
 Wiggle adalah proyek website profil perusahaan fashion yang dirancang khusus untuk memenuhi tugas **Ujian Akhir Semester (UAS) Mata Kuliah Pemrograman Web**. Website ini mengusung konsep desain yang lucu, stylish, dan interaktif sesuai dengan karakteristik target audiensnya (Gen Z).
 
 ## 🚀 Fitur & Teknologi yang Digunakan
@@ -28,11 +26,17 @@ Proyek ini memaksimalkan penggunaan framework **Bootstrap 5** dan **JavaScript**
 
 ## 📂 Struktur Folder
 ├── index.html        # Halaman Utama (Home)
+
 ├── about.html        # Halaman Tentang Kami & Tim
+
 ├── products.html     # Halaman Katalog Produk & Filter
+
 ├── contact.html      # Halaman Kontak & FAQ
+
 ├── style.css         # Custom Styling & Dark Mode Theme
+
 ├── script.js         # Logic Filter, Dark Mode, & Validasi
+
 └── image/            # Folder Aset Gambar & Produk
 
 🛠️ Cara Menjalankan
