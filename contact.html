@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wiggle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #fff0f3;
+            --text-main: #590d22;
+            --color-1: #c9184a;
+            --color-2: #a4133c;
+            --color-3: #800f2f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #1a0a0f;
+            color: #fff0f3;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            box-shadow: 0 4px 15px rgba(169, 19, 60, 0.3);
+            padding: 1.2rem 2rem;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 1,1rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-3px);
+            color: var(--bg-main) !important;
+        }
+
+        .nav-link.active {
+            border-bottom: 3px solid white;
+        }
+
+        .dark-mode-toggle {
+            background-color: var(--color-3);
+            border: none;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            padding: 100px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .page-header p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            padding: 100px 0;
+        }
+
+        .contact-form-container {
+            background-color: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(201, 24, 74, 0.2);
+        }
+
+        body.dark-mode .contact-form-container {
+            background-color: #2a1520;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: var(--color-2);
+            letter-spacing: -1px;
+        }
+
+        body.dark-mode .section-title {
+            color: #ff6b9d;
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        body.dark-mode .form-label {
+            color: #fff0f3;
+        }
+
+        .form-control {
+            border: 2px solid var(--color-1);
+            border-radius: 15px;
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--color-2);
+            box-shadow: 0 0 15px rgba(201, 24, 74, 0.3);
+            outline: none;
+        }
+
+        body.dark-mode .form-control {
+            background-color: #3a2530;
+            color: white;
+            border-color: var(--color-1);
+        }
+
+        .error-message {
+            color: var(--color-2);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            color: white;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(201, 24, 74, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(201, 24, 74, 0.5);
+        }
+
+        .contact-info-card {
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            border-radius: 25px;
+            padding: 40px;
+            color: white;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(201, 24, 74, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(201, 24, 74, 0.5);
+        }
+
+        .contact-info-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact-info-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .accordion-button {
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            color: white;
+            font-weight: 700;
+            font-size: 1.15rem;
+            border-radius: 15px !important;
+            padding: 20px 25px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--color-3);
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(201, 24, 74, 0.25);
+        }
+
+        .accordion-body {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            padding: 25px;
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(201, 24, 74, 0.2);
+        }
+
+        body.dark-mode .accordion-item {
+            background-color: #2a1520;
+        }
+
+        body.dark-mode .accordion-body {
+            background-color: #3a2530;
+            color: #fff0f3;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--color-3), var(--color-2));
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        footer h4 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 20px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.4) rotate(15deg);
+        }
+
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--color-1);
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            border-radius: 50%;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: var(--color-3);
+            transform: scale(1.15);
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-form-container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heart"></i> Wiggle
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <button class="dark-mode-toggle" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Hubungi Kami 📧</h1>
+            <p>Any Question?</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="contact-form-container">
+                        <h2 class="section-title">Kirim Pesan 💌</h2>
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label class="form-label">Nama Lengkap *</label>
+                                <input type="text" class="form-control" id="nameInput" placeholder="Masukkan nama kamu">
+                                <div class="error-message" id="nameError">
+                                    <i class="fas fa-exclamation-circle me-1"></i>Nama harus diisi!
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="email@example.com">
+                                <div class="error-message" id="emailError">
+                                    <i class="fas fa-exclamation-circle me-1"></i>Email harus diisi dengan format yang valid!
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Nomor WhatsApp</label>
+                                <input type="tel" class="form-control" id="phoneInput" placeholder="08123456789">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Pesan</label>
+                                <textarea class="form-control" id="messageInput" rows="6" placeholder="Tulis pesan kamu di sini... Mau tanya produk, size, atau kolaborasi? Yuk chat kami!"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h2 class="section-title">Info Kontak 📞</h2>
+                    
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Alamat Toko</h4>
+                        <p>Jl. Fashion Street No. 123<br>Jakarta Selatan 12345<br>Indonesia</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Telepon & WhatsApp</h4>
+                        <p>+62 812-3456-7890<br>Available 24/7 untuk emergency!</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>hello@Wiggle.com<br>Response dalam 1x24 jam!</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Jam Operasional</h4>
+                        <p>
+                            <strong>Senin - Sabtu:</strong> 09.00 - 21.00 WIB<br>
+                            <strong>Minggu:</strong> 10.00 - 18.00 WIB
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="section-title text-center mb-4">Frequently Asked Questions 🤔</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="fas fa-shopping-cart me-3"></i> Bagaimana cara order?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Kamu bisa order melalui website ini dengan klik "Add to Cart" atau langsung DM Instagram kami <strong>@Wiggle.id</strong>! Kami juga terima order via WhatsApp untuk yang lebih prefer chat langsung. Super gampang kok!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="fas fa-truck me-3"></i> Berapa lama pengiriman?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Untuk area <strong>Jakarta & sekitarnya: 1-2 hari</strong>, luar Jakarta <strong>3-5 hari kerja</strong>. Kita pakai ekspedisi terpercaya seperti JNE, J&T, dan SiCepat. Semua paket di-packing dengan love dan super rapi!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="fas fa-undo me-3"></i> Apakah bisa retur/tukar barang?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Bisa banget!</strong> Kami menerima retur/tukar dalam <strong>7 hari</strong> setelah barang diterima jika ada cacat produksi atau salah kirim. Pastikan produk masih dalam kondisi original dengan tag masih terpasang ya!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="fas fa-credit-card me-3"></i> Metode pembayaran apa saja yang tersedia?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Kami terima berbagai metode pembayaran: <strong>Transfer Bank</strong> (BCA, Mandiri, BRI), <strong>E-Wallet</strong> (GoPay, OVO, DANA, ShopeePay), dan <strong>QRIS</strong>. Semua transaksi aman dan terpercaya!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="fas fa-tshirt me-3"></i> Bagaimana cara memilih size yang tepat?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Setiap produk ada <strong>size chart</strong> nya! Atau bisa chat kami untuk konsultasi size. Kami akan bantu kamu pilih size yang pas berdasarkan tinggi & berat badan. Jangan ragu untuk tanya ya!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h4>Wiggle - Fashion for Gen Z 💖</h4>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Stay cute, stay stylish!</p>
+            <div class="social-icons mb-4">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2024 Wiggle. All Rights Reserved. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 25px; overflow: hidden;">
+                <div class="modal-header" style="background: linear-gradient(135deg, var(--color-1), var(--color-2)); color: white; border: none;">
+                    <h5 class=
